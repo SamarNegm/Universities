@@ -1,7 +1,6 @@
 const { FETCH_ALL, CREATE, UPDATE, DELETE } = require('../constants/actionTypes');
 
 export default (countries = [], action) => {
-    console.log("countries reducers action type");
     switch (action.type) {
         case FETCH_ALL:
             return action.payload;

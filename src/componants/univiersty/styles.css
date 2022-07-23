@@ -1,0 +1,51 @@
+.uni-card {
+    border-radius: 10px;
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    box-shadow: 0px 0px 3px #00000029;
+    border: 1px solid #8c01b633;
+    margin-bottom: 60px;
+    font-size: 14px;
+    padding: 10px;
+
+}
+
+.uni-hr {
+    color: #8c01b633;
+    opacity: 0.4;
+    border-color: #8c01b633 !important;
+
+}
+
+.uni-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.uni-ml-10 {
+    margin-inline: 10px;
+}
+
+.uni-fc-h {
+
+    color: #420b53;
+}
+
+.uni-domains-p {
+    font-weight: 600;
+}
+
+.uni-web-item {
+    text-decoration: none;
+    background-color: #8c01b66b;
+    padding-inline: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #fff;
+    border-radius: 4px;
+    margin: 10px;
+    ;
+}

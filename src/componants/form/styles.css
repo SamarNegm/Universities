@@ -1,0 +1,230 @@
+.form-main {
+    border-radius: 10px;
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    box-shadow: 0px 0px 3px #00000029;
+
+    border: 1px solid #01A4B633;
+    margin-bottom: 60px;
+    font-size: 14px;
+    margin-right: 40px;
+
+}
+
+.car-image {
+    /* height: 300px;
+    width: 300px */
+}
+
+.ReactModal__Overlay.ReactModal__Overlay--after-open {
+    background: rgb(178, 178, 178) !important;
+    z-index: 99999;
+}
+
+.ReactModal__Overlay.ReactModal__Overlay--after-open>.ReactModal__Content.ReactModal__Content--after-open {
+    border: none !important;
+}
+
+#car-modal .rec.rec-carousel-item {
+    display: flex;
+    align-items: center;
+}
+
+.form-Maincontainer .css-11lq3yg-MuiGrid-root {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+.form-Maincontainer {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.form-title {
+    background-color: #8c01b633;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-top: 17px;
+    padding-bottom: 17px;
+}
+
+.form-content {
+    padding-inline: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+/* small screen */
+@media screen and (max-width: 500px) {
+    .form-content {
+        padding-inline: 3rem;
+        padding-bottom: 1.5rem;
+    }
+}
+
+.form-sapn {
+    color: #8c01b633;
+}
+
+.form-content-p1 {
+    font-weight: 500;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.form-content-Choose-Category {
+    margin-top: 25px;
+}
+
+.form-select {
+
+    color: #8c01b633 !important;
+    border-radius: 5px;
+    border-left: 0px !important;
+    border: none;
+    outline: none;
+    border-bottom: #8c01b633 !important;
+
+}
+
+
+.form-input {
+    border: none;
+    border-bottom: 1px solid #8c01b633;
+    color: #8c01b633;
+    font-size: 14px;
+    margin-bottom: 12px;
+    padding-bottom: 7px;
+}
+
+.form-input:focus,
+.form-select :focus,
+.form-textArea:focus {
+    outline: none;
+}
+
+.form-select.css-1ptx2yq-MuiInputBase-root-MuiInput-root:before,
+.form-select.css-1ptx2yq-MuiInputBase-root-MuiInput-root:hover:not(.Mui-disabled):before {
+    color: #8c01b633;
+    border-bottom: 1px solid;
+    padding-bottom: 17px;
+
+
+}
+
+
+.css-19ygod6-MuiNativeSelect-select-MuiInputBase-input-MuiInput-input.css-19ygod6-MuiNativeSelect-select-MuiInputBase-input-MuiInput-input.css-19ygod6-MuiNativeSelect-select-MuiInputBase-input-MuiInput-input {
+    font-size: 14px;
+    padding-bottom: 7px;
+}
+
+.form-label {
+    margin-bottom: 5px;
+    margin-top: 15px;
+
+}
+
+.form-description {
+    margin-top: 15px;
+}
+
+.form-textArea {
+
+    border-color: #8c01b633;
+    padding: 10px;
+    border-radius: 4px;
+    min-height: 6rem;
+}
+
+.form-image {
+
+    width: 3rem;
+    height: 3rem;
+}
+
+.form-image {
+    height: 60px;
+    width: 60px;
+    margin-right: 5px;
+    border-radius: 3px;
+
+}
+
+.form-image-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.form-image-input {
+    display: none;
+
+}
+
+.form-label-addImage {
+    margin-top: 16px;
+    margin-bottom: 3px;
+}
+
+.form-image-label {
+    cursor: pointer;
+
+}
+
+.car-close {
+    position: absolute;
+    right: 14px;
+    top: 10px;
+
+}
+
+.modal-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form-image-group {
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    margin-bottom: 12px;
+    background-image: linear-gradient(140deg, #FFFFFF, #F6FEFF);
+    padding: 17px;
+    border-radius: 4px;
+    border: 1px solid var(--bondi-bue-32)
+}
+
+.form-submit-wrapper {
+    display: flex;
+    justify-content: end;
+}
+
+.form-submit {
+    color: #fff;
+    padding-inline: 40px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    font-size: 17px;
+    justify-content: center;
+    justify-items: center;
+}
+
+.form-submit-active {
+    background: #8c01b66b;
+
+}
+
+.form-submit-disabled {
+    background: #695e6d33;
+
+}

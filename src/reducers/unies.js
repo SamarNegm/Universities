@@ -18,10 +18,13 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 data: action.data,
-                loading: false
+                loading: false,
+                error: ''
+
             }
         }
         case LOAD_UNIVERSITES_ERROR: {
+            console.log("Errorr LOAD_UNIVERSITES_ERROR")
             return {
                 ...state,
                 loading: false,
@@ -32,7 +35,9 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 data: action.data,
-                loading: false
+                loading: false,
+                error: ''
+
             }
         // case CREATE:
         //     return [...state, action.payload];

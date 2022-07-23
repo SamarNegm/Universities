@@ -4,6 +4,15 @@
     justify-content: center;
 }
 
+.task-unis {
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    justify-items: center;
+}
+
+
+
 .task-Maincontainer {
     display: flex;
     justify-content: center;
@@ -14,4 +23,8 @@
 
     margin: 0 auto;
     display: block;
+}
+
+.task-form .css-m1czjo-MuiGrid-root {
+    max-width: 100% !important;
 }

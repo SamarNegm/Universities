@@ -1,4 +1,4 @@
 import { combineReducers } from 'redux';
 
-import countries from './countries';
-export const reducers = combineReducers({ countries });
+import data from './unies';
+export const reducers = combineReducers({ data });

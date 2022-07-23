@@ -10,3 +10,14 @@ export const fetchData = () => {
     })
 }
 
+export const RemoveItem = (index) => {
+
+    return new Promise((resolve, reject) => {
+
+        var didSucceed = Math.random() >= 0.5;
+        data = data.splice(index, 1)
+        console.log(data);
+        didSucceed ? resolve(data) : reject('Error');
+
+    })
+}

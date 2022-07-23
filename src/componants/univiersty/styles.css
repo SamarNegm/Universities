@@ -25,6 +25,11 @@
     align-items: center;
 }
 
+.uni-flex-end {
+    display: flex;
+    justify-content: end;
+}
+
 .uni-ml-10 {
     margin-inline: 10px;
 }

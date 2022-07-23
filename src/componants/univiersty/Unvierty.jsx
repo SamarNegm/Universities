@@ -1,8 +1,19 @@
 import React from 'react'
+import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded';
+import ModeEditOutlineRoundedIcon from '@mui/icons-material/ModeEditOutlineRounded';
+import { removeData } from '../../actions/unies';
+import { useDispatch } from 'react-redux';
 
-function Unvierty({ unvierty }) {
+function Unvierty({ unvierty, index }) {
+    const dispatch = useDispatch();
+
     return (
         <div className="uni-card uni-fc-h">
+            <div className=" uni-ml-10 uni-flex-end">
+                <ModeEditOutlineRoundedIcon />
+                <DeleteRoundedIcon onClick={() => dispatch(removeData(index))} />
+
+            </div>
             <h3>{unvierty.name}</h3>
             <div className="uni-flex uni-ml-10">
                 <p>{unvierty.country}</p>

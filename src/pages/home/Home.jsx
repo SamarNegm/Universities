@@ -10,6 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { getData } from '../../actions/unies';
 function Home() {
     const dispatch = useDispatch();
+    const [isAdding, setIsAdding] = useState(true)
     const [univiersty, setUniviersty] = useState({
         name: "",
         alpha_two_code: "",
@@ -44,11 +45,12 @@ function Home() {
     }, [dispatch]);
     useEffect(() => {
 
-    }, [univiersty]);
+    }, [univiersty, isAdding]);
+
+
     return (
         <>
-            {/* <NavBar backgroundWhite /> */}
-            {/* <VerificationProcessNav current={"postJob"} /> */}
+
             {
                 state.loading ? <div className="home-con">
                     <img src='./assets/loader.gif' alt="loader" className="loader" />
@@ -58,15 +60,13 @@ function Home() {
                         <Grid container>
                             <Grid xs={12} sm={12} md={5} lg={7} item>
                                 {
-                                    // showModal ? <Modal fileArray={fileArray} setShowModal={setShowModal} showModal={showModal} /> :
-                                    <Unviertis setUniviersty={setUniviersty} className="task-unis" />
+                                    <Unviertis setIsAdding={setIsAdding} setUniviersty={setUniviersty} className="task-unis" />
                                 }
                             </Grid>
                             <Grid xs={12} sm={12} md={5} lg={5} item>
                                 {
 
-                                    <Form univiersty={univiersty} setUniviersty={setUniviersty} />
-                                    // showModal ? <Modal fileArray={fileArray} setShowModal={setShowModal} showModal={showModal} /> :
+                                    <Form isAdding={isAdding} univiersty={univiersty} setUniviersty={setUniviersty} />
                                 }
                             </Grid>
                         </Grid>

@@ -4,13 +4,17 @@ import ModeEditOutlineRoundedIcon from '@mui/icons-material/ModeEditOutlineRound
 import { removeData } from '../../actions/unies';
 import { useDispatch } from 'react-redux';
 
-function Unvierty({ unvierty, index, setUniviersty }) {
+function Unvierty({ unvierty, index, setUniviersty, setIsAdding }) {
     const dispatch = useDispatch();
+    const hendelEdit = () => {
+        setIsAdding(false);
+        setUniviersty(unvierty);
+    }
 
     return (
         <div className="uni-card uni-fc-h">
             <div className=" uni-ml-10 uni-flex-end">
-                <ModeEditOutlineRoundedIcon onClick={() => setUniviersty(unvierty)} />
+                <ModeEditOutlineRoundedIcon onClick={hendelEdit} />
                 <DeleteRoundedIcon onClick={() => dispatch(removeData(index))} />
 
             </div>

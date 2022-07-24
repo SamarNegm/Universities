@@ -16,8 +16,8 @@ function Home() {
         alpha_two_code: "",
         country: "",
         state_province: "",
-        web_pages: "",
-        domains: ""
+        web_pages: [],
+        domains: []
 
 
     })
@@ -30,16 +30,18 @@ function Home() {
     };
     const state = useSelector((state) => state.data);
 
-    if (state.error) {
-        toast.error(state.error, toastOptions);
-
-    }
 
 
 
 
     useEffect(() => {
         dispatch(getData());
+        console.log(state);
+        if (state.error) {
+            toast.error(state.error, toastOptions);
+
+        }
+
         console.log(univiersty)
 
     }, [dispatch]);
@@ -73,7 +75,7 @@ function Home() {
                     </Box>
 
             }
-            <ToastContainer />
+            {/* <ToastContainer /> */}
         </>
     )
 }

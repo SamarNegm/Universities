@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import FormControl from "@mui/material/FormControl";
 import NativeSelect from "@mui/material/NativeSelect";
-import { updateUni } from '../../actions/unies';
+import { updateUni, createUni } from '../../actions/unies';
 import { useDispatch, useSelector } from 'react-redux';
 
 function FormMain({ univiersty, setUniviersty, currentUniId, setCurrentUniId }) {
@@ -30,7 +30,7 @@ function FormMain({ univiersty, setUniviersty, currentUniId, setCurrentUniId }) 
             if (currentUniId == -1) {
                 console.log("Adding")
 
-                // dispatch(createPost(postData));
+                dispatch(createUni(univiersty));
                 clear();
             } else {
                 console.log("Edit")
@@ -47,8 +47,8 @@ function FormMain({ univiersty, setUniviersty, currentUniId, setCurrentUniId }) 
             alpha_two_code: "",
             country: "",
             state_province: "",
-            web_pages: "",
-            domains: ""
+            web_pages: [],
+            domains: [],
         });
     };
 
@@ -134,10 +134,19 @@ function FormMain({ univiersty, setUniviersty, currentUniId, setCurrentUniId }) 
                             <input
                                 className="form-input"
                                 value={univiersty.domains || ""}
-                                onChange={(e) => setUniviersty({ ...univiersty, domains: e.target.value })}
+                                onChange={(e) => setUniviersty({ ...univiersty, domains: e.target.value.split(" ") })}
                             ></input>
                         </FormControl>
-
+                        <div className="form-label">
+                            <label> Web Pages</label>
+                        </div>
+                        <FormControl fullWidth>
+                            <input
+                                className="form-input"
+                                value={univiersty.web_pages || ""}
+                                onChange={(e) => setUniviersty({ ...univiersty, web_pages: e.target.value.split(" ") })}
+                            ></input>
+                        </FormControl>
                         <div className="form-submit-wrapper">
                             <div className={validData ? "form-submit form-submit-active" : "form-submit form-submit-disabled"} onClick={handleSubmit}>{currentUniId == -1 ? "Add" : "Edit"}</div>
                         </div>

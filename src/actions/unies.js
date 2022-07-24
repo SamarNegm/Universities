@@ -1,4 +1,4 @@
-const { fetchData, RemoveItem, UpdateItem } = require('../api/index.js');
+const { fetchData, RemoveItem, UpdateItem, CreateItem } = require('../api/index.js');
 const { FETCH_ALL, CREATE, UPDATE, DELETE, LIKE, LOAD_UNIVERSITES_LOADING, LOAD_UNIVERSITES_SUCCESS, LOAD_UNIVERSITES_ERROR } = require('../constants/actionTypes');
 
 export const getData = () => async (dispatch) => {
@@ -34,6 +34,19 @@ export const updateUni = (index, uni) => async (dispatch) => {
     try {
         dispatch({ type: LOAD_UNIVERSITES_LOADING });
         const data = await UpdateItem(index, uni);
+        console.log(data, " data");
+        dispatch({ type: UPDATE, data: data });
+        dispatch({ type: LOAD_UNIVERSITES_SUCCESS, data: data })
+    } catch (error) {
+        console.log(error);
+        dispatch({ type: LOAD_UNIVERSITES_ERROR, error: error.message || 'Unexpected Error!!!' })
+    }
+}
+export const createUni = (uni) => async (dispatch) => {
+
+    try {
+        dispatch({ type: LOAD_UNIVERSITES_LOADING });
+        const data = await CreateItem(uni);
         console.log(data, " data");
         dispatch({ type: UPDATE, data: data });
         dispatch({ type: LOAD_UNIVERSITES_SUCCESS, data: data })

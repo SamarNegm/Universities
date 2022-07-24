@@ -10,8 +10,21 @@
     font-size: 14px;
     padding: 10px;
     margin-inline: 4rem;
+}
+
+.uni-card-card {
+    box-shadow: none;
+    border: none;
+}
+
+.nui-click {
+    cursor: pointer;
 
 }
+
+
+
+
 
 .uni-hr {
     color: #8c01b633;
@@ -54,4 +67,10 @@
     border-radius: 4px;
     margin: 10px;
     ;
+}
+
+
+.ReactModal__Overlay.ReactModal__Overlay--after-open {
+    background: rgba(178, 178, 178, 0.562) !important;
+    z-index: 99999;
 }

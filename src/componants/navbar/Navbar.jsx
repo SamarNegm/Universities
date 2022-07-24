@@ -15,7 +15,7 @@ function Navbar() {
             <div className="nav-display-flex">
                 <div className="nav-abs-con">
                     <SearchOutlinedIcon className="nav-icon" />
-                    <input className="nav-input" placeholder="Ask question"></input>
+                    <input className="nav-input" placeholder="Search"></input>
                 </div>
 
             </div>

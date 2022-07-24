@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import FormControl from "@mui/material/FormControl";
 import NativeSelect from "@mui/material/NativeSelect";
-function FormMain({ univiersty, setUniviersty, isAdding }) {
+function FormMain({ univiersty, setUniviersty, currentUniId, setCurrentUniId }) {
     const countries = ["Egypt", "US", "UK", "Sudan", "Banama"];
     const [validData, setValidData] = useState(false);
 
@@ -19,22 +19,34 @@ function FormMain({ univiersty, setUniviersty, isAdding }) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         console.log("Submit")
+        if (validData) {
 
-        console.log()
+            console.log(currentUniId)
 
-        if (isAdding) {
-            console.log("Adding")
+            if (currentUniId == -1) {
+                console.log("Adding")
 
-            // dispatch(createPost(postData));
-            // clear();
-        } else {
-            console.log("Edit")
+                // dispatch(createPost(postData));
+                clear();
+            } else {
+                console.log("Edit")
 
-            // dispatch(updatePost(currentId, postData));
-            // clear();
+                // dispatch(updatePost(currentId, postData));
+                clear();
+            }
         }
     };
-
+    const clear = () => {
+        setCurrentUniId(-1);
+        setUniviersty({
+            name: "",
+            alpha_two_code: "",
+            country: "",
+            state_province: "",
+            web_pages: "",
+            domains: ""
+        });
+    };
 
     return (
         <div className="form-main">
@@ -123,7 +135,7 @@ function FormMain({ univiersty, setUniviersty, isAdding }) {
                         </FormControl>
 
                         <div className="form-submit-wrapper">
-                            <div className={validData ? "form-submit form-submit-active" : "form-submit form-submit-disabled"} onClick={handleSubmit}>{isAdding ? "Add" : "Edit"}</div>
+                            <div className={validData ? "form-submit form-submit-active" : "form-submit form-submit-disabled"} onClick={handleSubmit}>{currentUniId == -1 ? "Add" : "Edit"}</div>
                         </div>
                     </form>
                 </div>

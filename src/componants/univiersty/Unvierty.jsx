@@ -4,10 +4,10 @@ import ModeEditOutlineRoundedIcon from '@mui/icons-material/ModeEditOutlineRound
 import { removeData } from '../../actions/unies';
 import { useDispatch } from 'react-redux';
 
-function Unvierty({ unvierty, index, setUniviersty, setIsAdding }) {
+function Unvierty({ unvierty, index, setUniviersty, setCurrentUniId }) {
     const dispatch = useDispatch();
     const hendelEdit = () => {
-        setIsAdding(false);
+        setCurrentUniId(index);
         setUniviersty(unvierty);
     }
 

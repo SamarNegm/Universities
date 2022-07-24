@@ -21,3 +21,13 @@ export const RemoveItem = (index) => {
 
     })
 }
+export const UpdateItem = (index, uni) => {
+    return new Promise((resolve, reject) => {
+
+        var didSucceed = Math.random() >= 0.5;
+        data[index] = uni;
+        console.log(data);
+        didSucceed ? resolve(data) : reject('Error');
+
+    })
+}

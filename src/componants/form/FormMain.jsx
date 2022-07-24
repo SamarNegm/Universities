@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import FormControl from "@mui/material/FormControl";
 import NativeSelect from "@mui/material/NativeSelect";
+import { updateUni } from '../../actions/unies';
+import { useDispatch, useSelector } from 'react-redux';
+
 function FormMain({ univiersty, setUniviersty, currentUniId, setCurrentUniId }) {
+    const dispatch = useDispatch();
     const countries = ["Egypt", "US", "UK", "Sudan", "Banama"];
     const [validData, setValidData] = useState(false);
 
@@ -31,7 +35,7 @@ function FormMain({ univiersty, setUniviersty, currentUniId, setCurrentUniId }) 
             } else {
                 console.log("Edit")
 
-                // dispatch(updatePost(currentId, postData));
+                dispatch(updateUni(currentUniId, univiersty));
                 clear();
             }
         }

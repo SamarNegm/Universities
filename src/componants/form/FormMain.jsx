@@ -148,7 +148,7 @@ function FormMain({ univiersty, setUniviersty, currentUniId, setCurrentUniId }) 
                             ></input>
                         </FormControl>
                         <div className="form-submit-wrapper">
-                            <div className={validData ? "form-submit form-submit-active" : "form-submit form-submit-disabled"} onClick={handleSubmit}>{currentUniId == -1 ? "Add" : "Edit"}</div>
+                            <div className={validData ? "form-submit form-submit-active" : "form-submit-disabled"} onClick={handleSubmit}>{currentUniId == -1 ? "Add" : "Edit"}</div>
                         </div>
                     </form>
                 </div>

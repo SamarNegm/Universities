@@ -1,0 +1,36 @@
+.nav {
+    height: 70px;
+    background-color: #8c01b6cc;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-title {
+    color: #fff
+}
+
+.nav-display-flex {
+    display: flex;
+    justify-content: center;
+
+}
+
+.nav-icon {
+    position: absolute;
+    margin-left: 30px;
+    margin-top: 10px;
+    opacity: .4;
+}
+
+.nav-input {
+    border: 1px solid #CDD4D9;
+    border-radius: 2px;
+    outline: none;
+    height: 45px;
+    width: 100%;
+    margin-inline: 30px;
+    margin-bottom: 10px;
+    padding-inline: 40px;
+
+}

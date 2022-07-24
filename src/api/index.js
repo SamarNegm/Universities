@@ -4,8 +4,12 @@ export const fetchData = () => {
 
     return new Promise((resolve, reject) => {
         setTimeout(function () {
-            var didSucceed = Math.random() >= 0.1;
-            didSucceed ? resolve(data) : reject('Error');
+            // var didSucceed = Math.random() >= 0.1;
+            // didSucceed ?
+            resolve(data)
+            //     :
+
+            // reject('Error Please Reload');
         }, 2000);
     })
 }

@@ -8,6 +8,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { getData } from '../../actions/unies';
+import Navbar from '../../componants/navbar/Navbar';
 function Home() {
     const dispatch = useDispatch();
     const [currentUniId, setCurrentUniId] = useState(-1)
@@ -36,8 +37,8 @@ function Home() {
 
     useEffect(() => {
         dispatch(getData());
-        console.log(state);
         if (state.error) {
+
             toast.error(state.error, toastOptions);
 
         }
@@ -52,7 +53,7 @@ function Home() {
 
     return (
         <>
-
+            <Navbar />
             {
                 state.loading ? <div className="home-con">
                     <img src='./assets/loader.gif' alt="loader" className="loader" />
@@ -75,7 +76,7 @@ function Home() {
                     </Box>
 
             }
-            {/* <ToastContainer /> */}
+            <ToastContainer />
         </>
     )
 }

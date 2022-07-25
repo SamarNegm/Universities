@@ -1,4 +1,4 @@
-const { FETCH_ALL, CREATE, UPDATE, DELETE, LIKE, LOAD_UNIVERSITES_LOADING, LOAD_UNIVERSITES_SUCCESS, LOAD_UNIVERSITES_ERROR } = require('../constants/actionTypes');
+const { FETCH_ALL, CREATE, UPDATE, DELETE, LOAD_UNIVERSITES_LOADING, LOAD_UNIVERSITES_SUCCESS, LOAD_UNIVERSITES_ERROR } = require('../constants/actionTypes');
 const initialState = {
     data: [],
     loading: true,
@@ -6,6 +6,7 @@ const initialState = {
 };
 
 export default (state = initialState, action) => {
+    console.log(action.type, state);
     switch (action.type) {
         case LOAD_UNIVERSITES_LOADING: {
             return {
@@ -39,13 +40,15 @@ export default (state = initialState, action) => {
                 error: ''
 
             }
-        // case CREATE:
-        //     return [...state, action.payload];
-        // case UPDATE:
-        //     return state.map((data) => (data._id === action.payload._id ? action.payload : data));
+        case CREATE:
+            return [...state, action.data];
+        case UPDATE:
+            return [...state, action.data];
         case DELETE:
-            return state.data.splice(action.payload, 1);
+            console.log(action.data);
+            return state.data;
         default:
+            console.log("defult ", state);
             return state;
     }
 };

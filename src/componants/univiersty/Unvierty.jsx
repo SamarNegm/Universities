@@ -19,6 +19,8 @@ const customStyles = {
 
     },
 };
+Modal.setAppElement(document.getElementById("root"));
+
 function Unvierty({ unvierty, index, setUniviersty, setCurrentUniId }) {
 
     const dispatch = useDispatch();
@@ -37,16 +39,12 @@ function Unvierty({ unvierty, index, setUniviersty, setCurrentUniId }) {
         setIsOpen(false);
     }
 
-    function afterOpenModal() {
-        // references are now sync'd and can be accessed.
-        subtitle.style.color = '#f00';
-    }
+
     return (
         <>
 
             <Modal
                 isOpen={modalIsOpen}
-                onAfterOpen={afterOpenModal}
                 onRequestClose={closeModal}
                 style={customStyles}
                 contentLabel="Example Modal"

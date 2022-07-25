@@ -67,7 +67,7 @@ function FormMain({ univiersty, setUniviersty, currentUniId, setCurrentUniId }) 
 
                         <FormControl fullWidth>
                             <NativeSelect
-                                labelId="demo-simple-select-label"
+
                                 id="demo-simple-select"
                                 value={univiersty.country || ""}
                                 label="selectedJob"

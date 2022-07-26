@@ -21,14 +21,14 @@ const customStyles = {
 };
 Modal.setAppElement(document.getElementById("root"));
 
-function Unvierty({ unvierty, index, setUniviersty, setCurrentUniId }) {
+function University({ university, index, setUniviersty, setCurrentUniId }) {
 
     const dispatch = useDispatch();
     const [modalIsOpen, setIsOpen] = React.useState(false);
 
     const hendelEdit = () => {
         setCurrentUniId(index);
-        setUniviersty(unvierty);
+        setUniviersty(university);
     }
     let subtitle;
 
@@ -49,7 +49,7 @@ function Unvierty({ unvierty, index, setUniviersty, setCurrentUniId }) {
                 style={customStyles}
                 contentLabel="Example Modal"
             >
-                <Card unvierty={unvierty} />
+                <Card university={university} />
             </Modal>
 
             <div className="uni-card uni-fc-h " id="card">
@@ -60,11 +60,11 @@ function Unvierty({ unvierty, index, setUniviersty, setCurrentUniId }) {
                 </div>
                 <div className="nui-click" onClick={openModal}>
 
-                    <h3>{unvierty.name}</h3>
+                    <h3>{university.name}</h3>
                     <div className="uni-flex uni-ml-10">
-                        <p>{unvierty.country}</p>
-                        <p>{unvierty.state_province}</p>
-                        <p>{unvierty.alpha_two_code}</p>
+                        <p>{university.country}</p>
+                        <p>{university.state_province}</p>
+                        <p>{university.alpha_two_code}</p>
 
 
 
@@ -73,14 +73,14 @@ function Unvierty({ unvierty, index, setUniviersty, setCurrentUniId }) {
                     <p className="uni-domains-p uni-ml-10 ">Domains</p>
                     <div className="uni-domains uni-fc-h">
                         {
-                            unvierty.domains.map((domain, i) => <p className="uni-ml-10 " key={i} >{domain}</p>)
+                            university.domains.map((domain, i) => <p className="uni-ml-10 " key={i} >{domain}</p>)
                         }
 
                     </div>
 
                     <div className="uni-web uni-flex">
                         {
-                            unvierty.web_pages.map((domain, i) => <a className="uni-web-item" href={domain} key={i} >Web Page {i + 1}</a>)
+                            university.web_pages.map((domain, i) => <a className="uni-web-item" href={domain} key={i} >Web Page {i + 1}</a>)
                         }
 
                     </div>
@@ -91,4 +91,4 @@ function Unvierty({ unvierty, index, setUniviersty, setCurrentUniId }) {
     )
 }
 
-export default Unvierty
+export default University

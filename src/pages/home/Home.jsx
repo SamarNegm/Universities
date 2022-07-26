@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Form from '../../componants/form/Form';
 import { Box, Grid } from "@mui/material";
-import Unviertis from '../../componants/univiersty/Unviertis';
+import Universties from '../../componants/univiersty/Universties';
 import './styles.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { ToastContainer, toast } from "react-toastify";
@@ -63,7 +63,7 @@ function Home() {
                         <Grid container>
                             <Grid xs={12} sm={12} md={5} lg={7} item>
                                 {
-                                    <Unviertis setCurrentUniId={setCurrentUniId} setUniviersty={setUniviersty} className="task-unis" />
+                                    <Universties setCurrentUniId={setCurrentUniId} setUniviersty={setUniviersty} className="task-unis" />
                                 }
                             </Grid>
                             <Grid xs={12} sm={12} md={5} lg={5} item>
